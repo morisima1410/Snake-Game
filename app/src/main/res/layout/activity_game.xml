@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D0D">
+
+    <!--  TOP BAR -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#121212"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Score: 0"
+            android:textColor="#00FFAA" />
+
+        <TextView
+            android:id="@+id/txtLevel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Level: 1"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txtHighScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="High: 0"
+            android:textColor="#AAAAAA" />
+
+        <ImageButton
+            android:id="@+id/btnPause"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_media_pause" />
+    </LinearLayout>
+
+    <!--  GAME VIEW -->
+    <com.example.snakegame.GameView
+        android:id="@+id/gameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/controlLayout"
+        android:layout_below="@id/topBar" />
+
+    <!--  CONTROL BUTTONS -->
+    <LinearLayout
+        android:id="@+id/controlLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#0A0A0A"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- UP -->
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/bakagaround"
+            android:text="↑"
+            android:textColor="@color/neon_text"
+            android:textStyle="bold" />
+
+        <!-- LEFT RIGHT -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/bakagaround"
+                android:text="←"
+                android:textColor="@color/neon_text"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnRight"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/bakagaround"
+                android:text="→"
+                android:textColor="@color/neon_text"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- DOWN -->
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/bakagaround"
+            android:text="↓"
+            android:textColor="@color/neon_text"
+            android:textStyle="bold" />
+
+        <!-- RESTART -->
+        <Button
+            android:id="@+id/btnRestart"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/bakagaround"
+            android:text="Restart"
+            android:textColor="@color/neon_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--  PAUSE OVERLAY -->
+    <RelativeLayout
+        android:id="@+id/pauseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/pause_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="GAME PAUSED"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnResume"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/btn_rounded"
+                android:text="Resume" />
+
+            <Button
+                android:id="@+id/btnRestartPause"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_rounded"
+                android:text="Restart" />
+
+            <Button
+                android:id="@+id/btnExitPause"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_rounded"
+                android:text="Exit" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

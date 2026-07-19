@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D0D"
+    tools:context=".MainActivity">
+
+    <!--  Gradient Background -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient" />
+
+    <!--  Snake Mascot -->
+    <ImageView
+        android:id="@+id/snakeMascot"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img" />
+
+    <!--  Game Title -->
+    <TextView
+        android:id="@+id/gameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/snakeMascot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:letterSpacing="0.1"
+        android:text="SNAKE MASTER"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!--  High Score -->
+    <TextView
+        android:id="@+id/highScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gameTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="High Score: 0"
+        android:textColor="#DDDDDD"
+        android:textSize="16sp" />
+
+    <!--  Buttons -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/highScore"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_rounded"
+            android:text="Start Game"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_rounded"
+            android:text="Settings"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnInstructions"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_rounded"
+            android:text="Instructions"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_rounded"
+            android:text="Exit"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

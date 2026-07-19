@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="neon_bg">#000000</color>
+    <color name="neon_snake">#39FF14</color>
+    <color name="neon_food">#FF0000</color>
+    <color name="neon_text">#FFFFFF</color>
+
+    <!-- 🌑 MODERN DARK -->
+    <color name="dark_bg">#1E1E1E</color>
+    <color name="dark_snake">#4CAF50</color>
+    <color name="dark_food">#FF9800</color>
+    <color name="dark_button">#2196F3</color>
+
+    <!-- 🕹️ RETRO ARCADE -->
+    <color name="retro_bg">#000000</color>
+    <color name="retro_snake">#00FF00</color>
+    <color name="retro_food">#FFFF00</color>
+    <color name="retro_text">#00FF00</color>
+    <color name="bakagaround">#203A43</color>
+</resources>

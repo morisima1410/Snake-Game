@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".GameOverActivity">
+
+
+    <!-- CONTENT CONTAINER (for better layering) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--  TROPHY -->
+        <ImageView
+            android:id="@+id/trophy"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/trophy"
+            android:visibility="visible" />
+
+        <!-- GAME OVER TEXT -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trophy"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="GAME OVER"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <!-- SCORE -->
+        <TextView
+            android:id="@+id/txtFinalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trophy"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:text="Score : 0"
+            android:textColor="#00FFAA"
+            android:textSize="22sp" />
+
+        <!-- HIGH SCORE -->
+        <TextView
+            android:id="@+id/txtHighScoreOver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFinalScore"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="High Score : 0"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <!-- PLAY AGAIN -->
+        <Button
+            android:id="@+id/btnPlayAgain"
+            android:layout_width="220dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/txtHighScoreOver"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#00C853"
+            android:text="Play Again"
+            android:textColor="#FFFFFF" />
+
+        <!-- HOME -->
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="220dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/btnPlayAgain"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#2962FF"
+            android:text="Home"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
