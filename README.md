@@ -125,7 +125,7 @@ Through this project, I learned:
 
 ## 👨‍💻 Developer
 
-**Hardik Mori**
+**Sima Mori**
 
 GitHub:  
 https://github.com/morisima1410
